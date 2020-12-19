@@ -1,0 +1,20 @@
+spring:
+#  mvc:
+#    static-path-pattern: /static/**
+  thymeleaf:
+    mode: HTML
+    cache: false
+    encoding: UTF-8
+  profiles:
+    active: dev
+  messages:
+    basename: i18n/messages
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  mvc:
+    favicon:
+      enabled: false
+
+comment.avatar: /image/avatar.png
