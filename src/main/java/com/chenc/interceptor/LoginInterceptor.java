@@ -17,6 +17,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
                              HttpServletResponse response,
                              Object handler) throws Exception {
         if(request.getSession().getAttribute("user") == null){
+            request.setAttribute("msg","权限不足，请登录！");
             response.sendRedirect("/admin");
             return false;
         }
